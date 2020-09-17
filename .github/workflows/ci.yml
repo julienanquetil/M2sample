@@ -1,12 +1,30 @@
 name: Continous Integration
 on: [push, pull_request]
 jobs:
-  static:
-    name: M2 Coding Standard
+  run:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-versions: ['7.4']
+    name: M2 Coding Standard PHP ${{ matrix.php-versions }} Test
     steps:
-      - uses: actions/checkout@v2
-      - uses: extdn/github-actions-m2/magento-coding-standard@master
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: mbstring
+          coverage: none
+          tools: cs2pr, phpstan
+
+      - name: Composer dependencies
+        run: composer create-project magento/magento-coding-standard --stability=dev magento-coding-standard
+
+      - name: Run phpcs
+        run: ./magento-coding-standard/vendor/bin/phpcs --report=checkstyle --ignore=*/magento-coding-standard/* --standard=Magento2 ./ | cs2pr
 
   phpmd:
     name: M2 Mess Detector
