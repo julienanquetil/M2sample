@@ -1,12 +1,12 @@
 {
-    "name": ":vendor/:package",
-    "description": ":description",
+    "name": "JulienAnquetil/magento2-sample-module",
+    "description": "This module use the intger template system",
     "type": "magento2-module",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author-name",
-            "email": ":author-email"
+            "name": "Julien ANQUETIL",
+            "email": "julien.anquetil@gmail.com"
         }
     ],
     "minimum-stability": "stable",
@@ -15,12 +15,12 @@
             "registration.php"
         ],
         "psr-4": {
-            ":module-namespace\\:module-name\\": "src"
+            "JulienAnquetil\\m2sample\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            ":module-namespace\\:module-name\\": "tests/src"
+            "JulienAnquetil\\m2sample\\": "tests/src"
         }
     },
     "repositories": [
@@ -30,8 +30,8 @@
         }
     ],
     "require": {
-        "php": ":php-constraint",
-        "magento/framework": ":framework-constraint"
+        "php": "~7.1||~7.2||~7.3||~7.4",
+        "magento/framework": "^102.0.0||^103.0.0"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",

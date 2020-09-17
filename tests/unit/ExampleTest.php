@@ -1,6 +1,6 @@
 <?php
 
-namespace :module-namespace\:module-name;
+namespace JulienAnquetil\m2sample;
 
 use PHPUnit\Framework\TestCase;
 

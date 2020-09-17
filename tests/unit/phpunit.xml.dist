@@ -13,8 +13,8 @@
          bootstrap="./framework/bootstrap.php"
         >
     <testsuites>
-        <testsuite name=":module-namespace_:module-name Integration Tests">
-            <directory>../../../vendor/:vendor/:package/tests/unit</directory>
+        <testsuite name="JulienAnquetil_m2sample Integration Tests">
+            <directory>../../../vendor/JulienAnquetil/magento2-sample-module/tests/unit</directory>
         </testsuite>
     </testsuites>
     <php>
@@ -23,7 +23,7 @@
     </php>
     <filter>
         <whitelist>
-            <directory suffix=".php">../../../vendor/:vendor/:package/src/*</directory>
+            <directory suffix=".php">../../../vendor/JulienAnquetil/magento2-sample-module/src/*</directory>
         </whitelist>
     </filter>
     <listeners>
