@@ -11,7 +11,7 @@ use Magento\TestFramework\Helper\Bootstrap;
 class ExampleTest extends TestCase
 {
     /** @test */
-    public function we_can_use_the_object_manager()
+    public function WeCanUseTheObjectManager()
     {
         $this->assertInstanceOf(\Magento\TestFramework\ObjectManager::class, Bootstrap::getObjectManager());
     }
