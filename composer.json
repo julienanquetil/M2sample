@@ -1,5 +1,5 @@
 {
-    "name": "JulienAnquetil/magento2-sample-module",
+    "name": "julienanquetil/magento2-sample-module",
     "description": "This module use the intger template system",
     "type": "magento2-module",
     "license": "MIT",

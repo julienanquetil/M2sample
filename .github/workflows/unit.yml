@@ -8,8 +8,8 @@ jobs:
     env:
       MAGENTO_MARKETPLACE_USERNAME: ${{ secrets.MAGENTO_MARKETPLACE_USERNAME }}
       MAGENTO_MARKETPLACE_PASSWORD: ${{ secrets.MAGENTO_MARKETPLACE_PASSWORD }}
-      MODULE_NAME: JulienAnquetil
-      COMPOSER_NAME: m2sample
+      MODULE_NAME: julienanquetil
+      COMPOSER_NAME: magento2-sample-module
     steps:
       - uses: actions/checkout@v2
       - uses: docker://yireo/github-actions-magento-unit-tests:7.3
