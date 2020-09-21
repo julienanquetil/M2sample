@@ -15,7 +15,7 @@ class SampleModel extends TestCase {
     protected function setUp()
     {
         $this->_objectManager = new \Magento\Framework\TestFramework\Unit\Helper\ObjectManager($this);
-        $this->_model = $this->_objectManager->getObject("JulienAnquetil\m2sample\Model\TestModel");
+        $this->_model = $this->_objectManager->getObject("JulienAnquetil\m2sample\Model\SampleModel");
     }
 
     /**
