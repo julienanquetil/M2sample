@@ -41,5 +41,4 @@ class SampleModel
     {
         return $a * $b;
     }
-
 }
