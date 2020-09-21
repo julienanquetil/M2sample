@@ -4,7 +4,7 @@ namespace JulienAnquetil\m2sample;
 
 use PHPUnit\Framework\TestCase;
 
-class SampleModel extends TestCase {
+class SampleModelTest extends TestCase {
 
     protected $_objectManager;
     protected $_model;
